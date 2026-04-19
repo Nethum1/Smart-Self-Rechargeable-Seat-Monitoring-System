@@ -31,3 +31,15 @@ This system is built to be compact enough to fit inside a standard cushion seat,
 - 🎭 Auditoriums & theaters
 
 ---
+
+## ⚙️ How It Works
+
+### Stage 1 — Energy Harvesting (Piezo Sensor → Raw Voltage)
+
+When a person **sits down or shifts their weight**, the seat cushion undergoes mechanical stress. The **piezoelectric sensor** embedded inside the cushion converts this **vibration and pressure into a raw AC analog voltage**.
+
+- No external power source needed
+- Generates voltage proportional to applied force/vibration
+- Acts as both the **energy source** and the **occupancy sensor**
+
+---
