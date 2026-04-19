@@ -43,3 +43,18 @@ When a person **sits down or shifts their weight**, the seat cushion undergoes m
 - Acts as both the **energy source** and the **occupancy sensor**
 
 ---
+
+### Stage 2 — Signal Conditioning (TL071 Op-Amp)
+
+The raw output from the piezo sensor is very **weak and noisy**. The **TL071 operational amplifier** is used to:
+
+- **Amplify** the low-level voltage to a usable range
+- **Filter** electrical noise for a clean, stable signal
+- Split the conditioned output into two paths:
+  - → **Charging path** (to rectifier)
+  - → **Sensing path** (to ESP32 ADC pin)
+
+> 💡 The TL071 is ideal here because of its low input offset voltage and low noise characteristics, making it perfect for weak piezo signals.
+
+---
+
