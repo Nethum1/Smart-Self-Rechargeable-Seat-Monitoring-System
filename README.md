@@ -55,6 +55,25 @@ The raw output from the piezo sensor is very **weak and noisy**. The **TL071 ope
   - → **Sensing path** (to ESP32 ADC pin)
 
 > 💡 The TL071 is ideal here because of its low input offset voltage and low noise characteristics, making it perfect for weak piezo signals.
+---
+
+### Stage 3 — AC to DC Rectification (4× IN4007 Diodes)
+
+The piezoelectric sensor outputs **AC voltage** (alternating current). To charge a battery, we need **DC voltage**. Four **IN4007 diodes** are arranged in a **full-wave bridge rectifier** configuration:
+
+```
+         D1        D3
+   +---->|----+---->|----+
+   |          |          |
+Piezo AC    DC Out     GND
+   |          |          |
+   +---->|----+---->|----+
+         D2        D4
+```
+
+- Converts AC → DC efficiently
+- All four half-cycles are utilized (full-wave)
+- IN4007 handles up to 1000V PIV — very safe for this application
 
 ---
 
