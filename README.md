@@ -77,3 +77,10 @@ Piezo AC    DC Out     GND
 
 ---
 
+### Stage 4 — Battery Charging (TP4056)
+
+The rectified DC voltage is fed into the **TP4056** — a dedicated single-cell Li-Ion battery charging IC:
+
+```
+Rectified DC → [TP4056] → Li-Ion Battery (3.7V)
+```
