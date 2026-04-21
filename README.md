@@ -84,3 +84,13 @@ The rectified DC voltage is fed into the **TP4056** — a dedicated single-cell 
 ```
 Rectified DC → [TP4056] → Li-Ion Battery (3.7V)
 ```
+**TP4056 Features used:**
+- ✅ Constant Current / Constant Voltage (CC/CV) charging
+- ✅ Overcharge protection (stops at 4.2V)
+- ✅ Over-discharge protection
+- ✅ Short circuit protection
+- ✅ Built-in LED indicators (charging / full)
+
+> ⚠️ Always use a TP4056 module **with the protection circuit board** (the ones with 2 LEDs and 6 pins) for Li-Ion safety.
+
+---
