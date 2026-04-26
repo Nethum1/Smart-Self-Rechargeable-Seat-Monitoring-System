@@ -94,3 +94,19 @@ Rectified DC → [TP4056] → Li-Ion Battery (3.7V)
 > ⚠️ Always use a TP4056 module **with the protection circuit board** (the ones with 2 LEDs and 6 pins) for Li-Ion safety.
 
 ---
+
+### Stage 5 — Voltage Boosting (MT3608)
+
+The Li-Ion battery outputs ~**3.7V** (variable between 3.0V–4.2V during charge/discharge). The **ESP32 requires a stable 5V** on its VIN pin. The **MT3608 boost converter** steps up the voltage:
+
+```
+Li-Ion Battery (3.7V variable) → [MT3608] → 5V stable → ESP32 VIN
+```
+
+**MT3608 Configuration:**
+- Adjust the onboard potentiometer to set output to exactly **5.0V**
+- Verify with a multimeter before connecting the ESP32
+- Efficiency: up to 93%
+- Input range: 2V–24V | Output range: up to 28V
+
+---
