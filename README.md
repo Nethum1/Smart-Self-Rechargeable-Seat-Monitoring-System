@@ -110,3 +110,27 @@ Li-Ion Battery (3.7V variable) → [MT3608] → 5V stable → ESP32 VIN
 - Input range: 2V–24V | Output range: up to 28V
 
 ---
+
+### Stage 6 — Occupancy Detection (ESP32 ADC)
+
+The **ESP32** reads the conditioned analog signal from the TL071 output on its **ADC pin (e.g., GPIO34)**:
+
+```cpp
+int sensorValue = analogRead(34);  // Read piezo signal
+
+if (sensorValue > THRESHOLD) {
+    seatStatus = "OCCUPIED";       // Voltage detected → person sitting
+} else {
+    seatStatus = "VACANT";         // No voltage → seat is empty
+}
+```
+
+**Logic:**
+| Condition | ADC Reading | Seat Status |
+|-----------|-------------|-------------|
+| Person sitting | Above threshold | 🔴 OCCUPIED |
+| Seat empty | Below threshold | 🟢 VACANT |
+
+The threshold value is calibrated during setup based on your piezo sensor sensitivity.
+
+---
