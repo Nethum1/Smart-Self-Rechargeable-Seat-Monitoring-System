@@ -134,3 +134,22 @@ if (sensorValue > THRESHOLD) {
 The threshold value is calibrated during setup based on your piezo sensor sensitivity.
 
 ---
+
+### Stage 7 — Real-Time IoT Dashboard (ESP32 → Blynk)
+
+The ESP32 connects to **WiFi** and pushes the seat status to the **Blynk cloud platform**:
+
+```
+ESP32 → WiFi Router → Internet → Blynk Cloud → Mobile/Web Dashboard
+```
+
+Each seat is assigned a **unique Virtual Pin** on Blynk:
+
+| Seat | Virtual Pin | Dashboard Widget |
+|------|-------------|-----------------|
+| Seat 1 | V1 | LED (Green/Red) |
+| Seat 2 | V2 | LED (Green/Red) |
+| Seat 3 | V3 | LED (Green/Red) |
+| Seat N | VN | LED (Green/Red) |
+
+---
