@@ -153,3 +153,41 @@ Each seat is assigned a **unique Virtual Pin** on Blynk:
 | Seat N | VN | LED (Green/Red) |
 
 ---
+
+## 🗺️ System Architecture
+
+```
+┌─────────────────────────────────────────────────────────┐
+│                    INSIDE CUSHION SEAT                  │
+│                                                         │
+│  [Piezo Sensor]                                         │
+│       │                                                 │
+│       ▼                                                 │
+│  [TL071 Op-Amp] ──────────────────► [ESP32 ADC Pin]     │
+│       │                                    │            │
+│       ▼                                    │            │
+│  [Bridge Rectifier]                        │            │
+│  (4× IN4007 Diodes)                        │            │
+│       │                                    │            │
+│       ▼                                    │            │
+│  [TP4056 Charger]                          │            │
+│       │                                    │            │
+│       ▼                                    │            │
+│  [Li-Ion Battery]                          │            │
+│       │                                    │            │
+│       ▼                                    │            │
+│  [MT3608 Boost]──────────────────► [ESP32 VIN 5V]       │
+│                                            │            │
+└────────────────────────────────────────────│────────────┘
+                                             │
+                                             ▼ WiFi
+                                    [Blynk Cloud Server]
+                                             │
+                                             ▼
+                                  [Mobile / Web Dashboard]
+                               🟢 Seat 1: VACANT
+                               🔴 Seat 2: OCCUPIED
+                               🟢 Seat 3: VACANT
+```
+
+---
