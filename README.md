@@ -191,3 +191,20 @@ Each seat is assigned a **unique Virtual Pin** on Blynk:
 ```
 
 ---
+
+## 🧾 Components List (Bill of Materials)
+
+| # | Component | Specification | Role |
+|---|-----------|---------------|------|
+| 1 | Piezoelectric Sensor | 27mm disc or film type | Energy harvesting + occupancy sensing |
+| 2 | TL071 Op-Amp IC | Single op-amp, low noise | Signal amplification & conditioning |
+| 3 | IN4007 Diodes | 1A, 1000V PIV | Bridge rectifier (AC → DC) |
+| 4 | TP4056 Module | With protection circuit | Li-Ion battery charging |
+| 5 | MT3608 Module | DC-DC boost converter | Step-up voltage to 5V |
+| 6 | Li-Ion Battery | 3.7V, 1000–2000mAh | Energy storage |
+| 7 | ESP32 Dev Board | ESP-WROOM-32 | Microcontroller + WiFi |
+| 8 | Resistors | Various (10kΩ, 100kΩ) | Voltage divider & biasing |
+| 9 | Capacitors | 100nF, 10µF | Filtering & decoupling |
+| 10 | PCB / Perfboard | Custom or stripboard | Circuit mounting |
+
+---
