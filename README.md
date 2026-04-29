@@ -242,3 +242,19 @@ GND → TP4056 (IN-) → Battery (-) → MT3608 (IN-) → ESP32 (GND)
 ```
 
 ---
+## 💻 ESP32 Firmware
+
+### Installation
+
+1. Install [Arduino IDE](https://www.arduino.cc/en/software)
+2. Add ESP32 board package:
+   - Go to `File → Preferences → Additional Board URLs`
+   - Add: `https://dl.espressif.com/dl/package_esp32_index.json`
+3. Install **Blynk library** via `Sketch → Include Library → Manage Libraries` → Search "Blynk"
+4. Open `Firmware/piezo_seat.ino`
+5. Edit `blynk_config.h` with your credentials
+6. Upload to ESP32
+
+> 📝 For multiple seats in one hall, use separate ESP32 boards per seat, each with a unique `BLYNK_AUTH_TOKEN` and `SEAT_VPIN`.
+
+---
