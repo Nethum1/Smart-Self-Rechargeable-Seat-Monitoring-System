@@ -277,3 +277,32 @@ GND → TP4056 (IN-) → Battery (-) → MT3608 (IN-) → ESP32 (GND)
    - **Notification** widget for alerts when a seat becomes available
 
 ---
+
+## 📁 Project Structure
+
+```
+PiezoSeat/
+│
+├── Hardware/
+│   ├── schematic.pdf              # Full circuit schematic
+│   ├── PCB_layout.png             # PCB layout design
+│   └── components_list.md         # Full Bill of Materials
+│
+├── Firmware/
+│   ├── piezo_seat.ino             # Main ESP32 Arduino sketch
+│   └── blynk_config.h             # WiFi credentials & Blynk token
+│
+├── Docs/
+│   ├── working_principle.md       # Detailed energy harvesting explanation
+│   ├── circuit_explanation.md     # Stage-by-stage circuit guide
+│   └── blynk_setup_guide.md       # Step-by-step Blynk setup
+│
+├── Images/
+│   ├── prototype_top.jpg          # Top view of prototype
+│   ├── prototype_inside.jpg       # Internal circuit view
+│   └── dashboard_screenshot.png   # Blynk dashboard screenshot
+│
+└── README.md                      # This file
+```
+
+---
