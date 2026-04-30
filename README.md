@@ -319,3 +319,16 @@ PiezoSeat/
 | 6 | **Low-Cost Hardware** | Built with widely available, affordable components |
 
 ---
+
+## 🚀 Future Improvements
+
+- [ ] Add **MQTT protocol** support as alternative to Blynk
+- [ ] Design a **custom PCB** for miniaturization
+- [ ] Add **deep sleep mode** on ESP32 for ultra-low power standby
+- [ ] Integrate **multiple piezo discs** in series for higher energy output
+- [ ] Add **supercapacitor** alongside battery for peak energy buffering
+- [ ] Build a **web dashboard** with seat map layout of the entire room
+- [ ] Add **data analytics** — track seat usage patterns over time
+- [ ] Explore **LoRa** for large halls without WiFi coverage
+
+---
