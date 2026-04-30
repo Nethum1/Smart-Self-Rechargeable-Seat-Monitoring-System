@@ -258,3 +258,22 @@ GND → TP4056 (IN-) → Battery (-) → MT3608 (IN-) → ESP32 (GND)
 > 📝 For multiple seats in one hall, use separate ESP32 boards per seat, each with a unique `BLYNK_AUTH_TOKEN` and `SEAT_VPIN`.
 
 ---
+
+## 📱 Blynk Dashboard Setup
+
+1. Download the **Blynk IoT app** (iOS / Android) or visit [blynk.cloud](https://blynk.cloud)
+2. Create a **New Template** → Name it `PiezoSeat`
+3. Create a **New Device** for each seat
+4. Copy the **Auth Token** into `blynk_config.h`
+5. Add **Datastream**:
+   - Type: Virtual Pin
+   - Pin: V1 (one per seat)
+   - Data Type: Integer (0 or 255)
+6. Add **LED Widget** to dashboard:
+   - Link to V1
+   - Color: Green (vacant) / Red (occupied)
+7. Optionally add:
+   - **Value Display** widget for raw sensor reading
+   - **Notification** widget for alerts when a seat becomes available
+
+---
