@@ -306,3 +306,16 @@ PiezoSeat/
 ```
 
 ---
+
+## 💡 Key Innovations
+
+| # | Innovation | Description |
+|---|------------|-------------|
+| 1 | **Zero External Power** | Fully self-rechargeable from human body weight and vibration |
+| 2 | **Dual-Purpose Sensor** | Piezo acts as both energy harvester AND occupancy detector |
+| 3 | **Scalable Architecture** | Each seat is an independent node — add unlimited seats |
+| 4 | **Non-Intrusive Design** | Entire circuit fits inside a standard cushion seat |
+| 5 | **Real-Time Monitoring** | Live dashboard for any space via mobile or web |
+| 6 | **Low-Cost Hardware** | Built with widely available, affordable components |
+
+---
