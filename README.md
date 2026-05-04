@@ -1,6 +1,7 @@
 # Smart-Self-Rechargeable-Seat-Monitoring-System
 A smart, energy-harvesting seat system that detects occupancy using piezoelectric  sensors and monitors seat availability in real-time via the Blynk IoT dashboard.  Designed to be embedded inside cushion seats in classrooms, lecture halls, or  public spaces — with zero external power dependency.
 
+<img width="1188" height="845" alt="new" src="https://github.com/user-attachments/assets/8dda6eb6-f5c1-49bd-bb8b-9fbcff8e945c" />
 
 
 ## 📌 Table of Contents
